@@ -1156,7 +1156,413 @@
             font-weight: 700;
         }
 
-        /* Enhanced table for mobile */
+        /* LLMO vs SEO Comparison Table - Enhanced Readability */
+        .llmo-comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 40px 0;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            border: 2px solid var(--arizona-red);
+        }
+
+        .llmo-comparison-table::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--arizona-red), var(--azurite), var(--leaf));
+        }
+
+        .llmo-comparison-table th {
+            background: var(--arizona-blue);
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.1em;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--arizona-red);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .llmo-comparison-table th::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .llmo-comparison-table th:hover::before {
+            left: 100%;
+        }
+
+        .llmo-comparison-table th:first-child {
+            background: var(--arizona-red);
+            color: #ffffff;
+        }
+
+        .llmo-comparison-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 2px solid rgba(171, 5, 32, 0.1);
+            color: var(--midnight);
+            font-weight: 500;
+            font-size: 1.05em;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .llmo-comparison-table td:first-child {
+            background: linear-gradient(135deg, rgba(171, 5, 32, 0.05), rgba(171, 5, 32, 0.02));
+            font-weight: 700;
+            color: var(--arizona-red);
+            border-right: 3px solid rgba(171, 5, 32, 0.2);
+        }
+
+        .llmo-comparison-table td:nth-child(2) {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(240, 240, 240, 0.8));
+            border-right: 2px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .llmo-comparison-table td:nth-child(3) {
+            background: linear-gradient(135deg, rgba(112, 184, 101, 0.05), rgba(112, 184, 101, 0.02));
+            color: var(--midnight);
+        }
+
+        .llmo-comparison-table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .llmo-comparison-table tbody tr:hover {
+            transform: scale(1.005);
+            box-shadow: 0 8px 25px rgba(171, 5, 32, 0.1);
+        }
+
+        .llmo-comparison-table tbody tr:hover td {
+            color: var(--midnight);
+            font-weight: 600;
+        }
+
+        .llmo-comparison-table tbody tr:hover td:first-child {
+            color: var(--arizona-red);
+            background: linear-gradient(135deg, rgba(171, 5, 32, 0.1), rgba(171, 5, 32, 0.05));
+        }
+
+        .llmo-comparison-table tbody tr:hover td:nth-child(3) {
+            background: linear-gradient(135deg, rgba(112, 184, 101, 0.1), rgba(112, 184, 101, 0.05));
+        }
+
+                 .llmo-comparison-table strong {
+             color: var(--arizona-red);
+             font-weight: 700;
+         }
+
+         /* Enhanced Tables - Universal Styling for Readability */
+         .data-table {
+             width: 100%;
+             border-collapse: separate;
+             border-spacing: 0;
+             margin: 40px 0;
+             background: #ffffff;
+             border-radius: 12px;
+             overflow: hidden;
+             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+             position: relative;
+             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+             border: 2px solid var(--azurite);
+         }
+
+         .data-table::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             height: 3px;
+             background: linear-gradient(90deg, var(--azurite), var(--arizona-red), var(--leaf));
+         }
+
+         .data-table th {
+             background: var(--azurite);
+             color: #ffffff;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: 0.8px;
+             font-size: 1em;
+             padding: 20px 18px;
+             text-align: left;
+             border-bottom: 2px solid var(--arizona-red);
+             position: relative;
+             overflow: hidden;
+         }
+
+         .data-table th::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: -100%;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+             transition: left 0.5s ease;
+         }
+
+         .data-table th:hover::before {
+             left: 100%;
+         }
+
+         .data-table td {
+             padding: 18px;
+             text-align: left;
+             border-bottom: 1px solid rgba(30, 82, 136, 0.1);
+             color: var(--midnight);
+             font-weight: 500;
+             font-size: 1em;
+             line-height: 1.6;
+             transition: all 0.3s ease;
+             background: #ffffff;
+         }
+
+         /* Zebra striping for better readability */
+         .data-table tbody tr:nth-child(even) td {
+             background: linear-gradient(135deg, rgba(30, 82, 136, 0.02), rgba(30, 82, 136, 0.01));
+         }
+
+         .data-table tbody tr:nth-child(odd) td {
+             background: #ffffff;
+         }
+
+         .data-table tbody tr {
+             transition: all 0.3s ease;
+         }
+
+         .data-table tbody tr:hover {
+             transform: scale(1.005);
+             box-shadow: 0 6px 20px rgba(30, 82, 136, 0.1);
+         }
+
+         .data-table tbody tr:hover td {
+             color: var(--midnight);
+             font-weight: 600;
+             background: linear-gradient(135deg, rgba(30, 82, 136, 0.08), rgba(30, 82, 136, 0.04)) !important;
+         }
+
+         .data-table td:first-child {
+             font-weight: 700;
+             color: var(--azurite);
+             border-right: 2px solid rgba(30, 82, 136, 0.1);
+         }
+
+         .data-table strong {
+             color: var(--arizona-red);
+             font-weight: 700;
+         }
+
+         /* KPI Table - Specialized styling for metrics */
+         .kpi-table {
+             width: 100%;
+             border-collapse: separate;
+             border-spacing: 0;
+             margin: 40px 0;
+             background: #ffffff;
+             border-radius: 15px;
+             overflow: hidden;
+             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+             position: relative;
+             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+             border: 3px solid var(--leaf);
+         }
+
+         .kpi-table::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             height: 4px;
+             background: linear-gradient(90deg, var(--leaf), var(--neon-yellow), var(--arizona-red));
+         }
+
+         .kpi-table th {
+             background: var(--leaf);
+             color: #ffffff;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+             font-size: 1.05em;
+             padding: 22px 20px;
+             text-align: center;
+             border-bottom: 3px solid var(--arizona-red);
+             position: relative;
+             overflow: hidden;
+         }
+
+         .kpi-table th:first-child {
+             text-align: left;
+             background: var(--arizona-red);
+         }
+
+         .kpi-table th::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: -100%;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+             transition: left 0.6s ease;
+         }
+
+         .kpi-table th:hover::before {
+             left: 100%;
+         }
+
+         .kpi-table td {
+             padding: 20px;
+             text-align: left;
+             border-bottom: 2px solid rgba(112, 184, 101, 0.1);
+             color: var(--midnight);
+             font-weight: 500;
+             font-size: 1.05em;
+             line-height: 1.6;
+             transition: all 0.3s ease;
+             background: #ffffff;
+         }
+
+         .kpi-table td:first-child {
+             background: linear-gradient(135deg, rgba(171, 5, 32, 0.05), rgba(171, 5, 32, 0.02));
+             font-weight: 700;
+             color: var(--arizona-red);
+             border-right: 3px solid rgba(171, 5, 32, 0.2);
+         }
+
+         .kpi-table tbody tr:nth-child(even) td:not(:first-child) {
+             background: linear-gradient(135deg, rgba(112, 184, 101, 0.03), rgba(112, 184, 101, 0.01));
+         }
+
+         .kpi-table tbody tr:hover {
+             transform: scale(1.005);
+             box-shadow: 0 8px 25px rgba(112, 184, 101, 0.15);
+         }
+
+         .kpi-table tbody tr:hover td {
+             color: var(--midnight);
+             font-weight: 600;
+         }
+
+         .kpi-table strong {
+             color: var(--arizona-red);
+             font-weight: 700;
+         }
+
+         /* Content Distribution Table - Specialized for content strategy */
+         .content-table {
+             width: 100%;
+             border-collapse: separate;
+             border-spacing: 0;
+             margin: 40px 0;
+             background: #ffffff;
+             border-radius: 14px;
+             overflow: hidden;
+             box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+             position: relative;
+             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+             border: 2px solid var(--river);
+         }
+
+         .content-table::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             height: 3px;
+             background: linear-gradient(90deg, var(--river), var(--oasis), var(--sky));
+         }
+
+         .content-table th {
+             background: var(--river);
+             color: #ffffff;
+             font-weight: 700;
+             text-transform: uppercase;
+             letter-spacing: 0.9px;
+             font-size: 1.05em;
+             padding: 20px 18px;
+             text-align: left;
+             border-bottom: 2px solid var(--arizona-red);
+             position: relative;
+             overflow: hidden;
+         }
+
+         .content-table th::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: -100%;
+             width: 100%;
+             height: 100%;
+             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+             transition: left 0.5s ease;
+         }
+
+         .content-table th:hover::before {
+             left: 100%;
+         }
+
+         .content-table td {
+             padding: 18px;
+             text-align: left;
+             border-bottom: 1px solid rgba(0, 125, 132, 0.1);
+             color: var(--midnight);
+             font-weight: 500;
+             font-size: 1em;
+             line-height: 1.6;
+             transition: all 0.3s ease;
+             background: #ffffff;
+         }
+
+         .content-table tbody tr:nth-child(even) td {
+             background: linear-gradient(135deg, rgba(0, 125, 132, 0.02), rgba(0, 125, 132, 0.01));
+         }
+
+         .content-table tbody tr:hover {
+             transform: scale(1.005);
+             box-shadow: 0 7px 22px rgba(0, 125, 132, 0.12);
+         }
+
+         .content-table tbody tr:hover td {
+             color: var(--midnight);
+             font-weight: 600;
+             background: linear-gradient(135deg, rgba(0, 125, 132, 0.06), rgba(0, 125, 132, 0.03)) !important;
+         }
+
+         .content-table td:first-child {
+             font-weight: 700;
+             color: var(--river);
+             border-right: 2px solid rgba(0, 125, 132, 0.15);
+         }
+
+         .content-table strong {
+             color: var(--arizona-red);
+             font-weight: 700;
+         }
+
+         /* Enhanced table for mobile */
         @media (max-width: 768px) {
             table {
                 font-size: 0.9em;
@@ -1165,7 +1571,68 @@
             th, td {
                 padding: 15px 10px;
             }
-        }
+
+            .llmo-comparison-table {
+                font-size: 0.95em;
+                margin: 20px 0;
+            }
+            
+            .llmo-comparison-table th {
+                padding: 18px 12px;
+                font-size: 1em;
+            }
+            
+                         .llmo-comparison-table td {
+                 padding: 15px 12px;
+                 font-size: 1em;
+             }
+
+             /* Responsive styles for all enhanced tables */
+             .data-table {
+                 font-size: 0.9em;
+                 margin: 20px 0;
+             }
+             
+             .data-table th {
+                 padding: 16px 10px;
+                 font-size: 0.9em;
+             }
+             
+             .data-table td {
+                 padding: 14px 10px;
+                 font-size: 0.95em;
+             }
+
+             .kpi-table {
+                 font-size: 0.85em;
+                 margin: 20px 0;
+             }
+             
+             .kpi-table th {
+                 padding: 16px 8px;
+                 font-size: 0.9em;
+             }
+             
+             .kpi-table td {
+                 padding: 14px 8px;
+                 font-size: 0.9em;
+             }
+
+             .content-table {
+                 font-size: 0.9em;
+                 margin: 20px 0;
+             }
+             
+             .content-table th {
+                 padding: 16px 10px;
+                 font-size: 0.9em;
+             }
+             
+             .content-table td {
+                 padding: 14px 10px;
+                 font-size: 0.95em;
+             }
+         }
 
         .metric-card {
             background: rgba(255, 255, 255, 0.95);
@@ -1256,6 +1723,199 @@
             font-weight: bold;
         }
 
+        /* LLMO Principles Grid - Enhanced Layout */
+        .llmo-principles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+            padding: 20px;
+        }
+
+        .llmo-principle-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            position: relative;
+            min-height: 320px;
+        }
+
+        .llmo-principle-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .llmo-principle-card.principle-1::before {
+            background: linear-gradient(90deg, var(--arizona-red), var(--bloom));
+        }
+
+        .llmo-principle-card.principle-2::before {
+            background: linear-gradient(90deg, var(--azurite), var(--sky));
+        }
+
+        .llmo-principle-card.principle-3::before {
+            background: linear-gradient(90deg, var(--leaf), var(--neon-yellow));
+        }
+
+        .llmo-principle-card.principle-4::before {
+            background: linear-gradient(90deg, var(--river), var(--oasis));
+        }
+
+        .llmo-principle-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(171, 5, 32, 0.2);
+        }
+
+        .llmo-principle-card:hover::before {
+            height: 8px;
+            box-shadow: 0 0 20px currentColor;
+        }
+
+        .principle-header {
+            padding: 25px 30px 15px 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+        }
+
+        .principle-number {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1.2em;
+            color: var(--arizona-red);
+            background: rgba(171, 5, 32, 0.1);
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 2px solid var(--arizona-red);
+            text-shadow: 0 0 5px var(--arizona-red);
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .principle-2 .principle-number {
+            color: var(--azurite);
+            background: rgba(30, 82, 136, 0.1);
+            border-color: var(--azurite);
+            text-shadow: 0 0 5px var(--azurite);
+        }
+
+        .principle-3 .principle-number {
+            color: var(--leaf);
+            background: rgba(112, 184, 101, 0.1);
+            border-color: var(--leaf);
+            text-shadow: 0 0 5px var(--leaf);
+        }
+
+        .principle-4 .principle-number {
+            color: var(--river);
+            background: rgba(0, 125, 132, 0.1);
+            border-color: var(--river);
+            text-shadow: 0 0 5px var(--river);
+        }
+
+        .principle-icon {
+            font-size: 2em;
+            filter: drop-shadow(0 0 8px currentColor);
+            animation: iconFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+
+        .principle-header h4 {
+            color: var(--midnight);
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.2em;
+            line-height: 1.3;
+            flex: 1;
+        }
+
+        .principle-content {
+            padding: 20px 30px 30px 30px;
+        }
+
+        .principle-subtitle {
+            color: var(--midnight);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .principle-features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateX(5px);
+            border-color: rgba(171, 5, 32, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 1.1em;
+            min-width: 20px;
+            filter: drop-shadow(0 0 3px currentColor);
+        }
+
+        .feature-item span:last-child {
+            color: var(--midnight);
+            font-weight: 500;
+            line-height: 1.4;
+            font-size: 0.95em;
+        }
+
+        /* Responsive adjustments for LLMO grid */
+        @media (max-width: 968px) {
+            .llmo-principles-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 20px;
+                padding: 10px;
+            }
+            
+            .llmo-principle-card {
+                min-height: auto;
+            }
+            
+            .principle-header {
+                padding: 20px 25px 15px 25px;
+            }
+            
+            .principle-content {
+                padding: 15px 25px 25px 25px;
+            }
+        }
+
+        /* Legacy roadmap styles for other sections */
         .roadmap {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -3163,44 +3823,113 @@
             </ul>
 
             <h3>Core LLMO Principles</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>1. Content Clarity & Structure</h4>
-                    <p><strong>What LLMs Need:</strong> Clear, well-organized information with logical flow</p>
-                    <ul>
-                        <li>Descriptive headings that summarize content sections</li>
-                        <li>Bullet points and lists for easy parsing</li>
-                        <li>Consistent terminology across all content</li>
-                        <li>Factual accuracy with proper attribution</li>
-                    </ul>
+            <div class="llmo-principles-grid">
+                <div class="llmo-principle-card principle-1">
+                    <div class="principle-header">
+                        <div class="principle-number">01</div>
+                        <div class="principle-icon">📝</div>
+                        <h4>Content Clarity & Structure</h4>
+                    </div>
+                    <div class="principle-content">
+                        <p class="principle-subtitle"><strong>What LLMs Need:</strong> Clear, well-organized information with logical flow</p>
+                        <div class="principle-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <span>Descriptive headings that summarize content sections</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📋</span>
+                                <span>Bullet points and lists for easy parsing</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔄</span>
+                                <span>Consistent terminology across all content</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✅</span>
+                                <span>Factual accuracy with proper attribution</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h4>2. Entity Alignment & Semantic Consistency</h4>
-                    <p><strong>What This Means:</strong> LLMs understand relationships between concepts, people, and organizations</p>
-                    <ul>
-                        <li>Consistent naming: Always use "University of Arizona Global Campus"</li>
-                        <li>Topic clustering: Group related content (military education, online learning)</li>
-                        <li>Authority signals: Faculty credentials, research achievements, accreditation details</li>
-                    </ul>
+
+                <div class="llmo-principle-card principle-2">
+                    <div class="principle-header">
+                        <div class="principle-number">02</div>
+                        <div class="principle-icon">🧠</div>
+                        <h4>Entity Alignment & Semantic Consistency</h4>
+                    </div>
+                    <div class="principle-content">
+                        <p class="principle-subtitle"><strong>What This Means:</strong> LLMs understand relationships between concepts, people, and organizations</p>
+                        <div class="principle-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🏛️</span>
+                                <span>Consistent naming: Always use "University of Arizona Global Campus"</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔗</span>
+                                <span>Topic clustering: Group related content (military education, online learning)</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">⭐</span>
+                                <span>Authority signals: Faculty credentials, research achievements, accreditation details</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h4>3. Statistical Evidence & Expert Quotes</h4>
-                    <p><strong>Why It Works:</strong> LLMs prioritize content with verifiable data and expert opinions</p>
-                    <ul>
-                        <li>Research citations: "According to NCES data, 73% of online students report higher engagement with cited content"<sup><a href="https://nces.ed.gov/programs/digest/d22/tables/dt22_311.15.asp" target="_blank" class="citation-link" title="National Center for Education Statistics, 2022">[5]</a></sup></li>
-                        <li>Faculty expertise: Quote professors and subject matter experts</li>
-                        <li>Institutional data: Graduation rates, employment outcomes, satisfaction scores</li>
-                    </ul>
+
+                <div class="llmo-principle-card principle-3">
+                    <div class="principle-header">
+                        <div class="principle-number">03</div>
+                        <div class="principle-icon">📊</div>
+                        <h4>Statistical Evidence & Expert Quotes</h4>
+                    </div>
+                    <div class="principle-content">
+                        <p class="principle-subtitle"><strong>Why It Works:</strong> LLMs prioritize content with verifiable data and expert opinions</p>
+                        <div class="principle-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">📈</span>
+                                <span>Research citations: "According to NCES data, 73% of online students report higher engagement with cited content"<sup><a href="https://nces.ed.gov/programs/digest/d22/tables/dt22_311.15.asp" target="_blank" class="citation-link" title="National Center for Education Statistics, 2022">[5]</a></sup></span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">👨‍🏫</span>
+                                <span>Faculty expertise: Quote professors and subject matter experts</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <span>Institutional data: Graduation rates, employment outcomes, satisfaction scores</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h4>4. Digital Authority Building</h4>
-                    <p><strong>The Goal:</strong> Establish UAGC as a trusted source across the web</p>
-                    <ul>
-                        <li>Backlink development from reputable educational sites</li>
-                        <li>Media mentions in credible news sources</li>
-                        <li>Academic partnerships and research collaborations</li>
-                        <li>Professional recognition and awards</li>
-                    </ul>
+
+                <div class="llmo-principle-card principle-4">
+                    <div class="principle-header">
+                        <div class="principle-number">04</div>
+                        <div class="principle-icon">🚀</div>
+                        <h4>Digital Authority Building</h4>
+                    </div>
+                    <div class="principle-content">
+                        <p class="principle-subtitle"><strong>The Goal:</strong> Establish UAGC as a trusted source across the web</p>
+                        <div class="principle-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔗</span>
+                                <span>Backlink development from reputable educational sites</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📰</span>
+                                <span>Media mentions in credible news sources</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🤝</span>
+                                <span>Academic partnerships and research collaborations</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🏆</span>
+                                <span>Professional recognition and awards</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -3263,7 +3992,7 @@
                 <p><strong>Understanding the fundamental differences between traditional SEO and Large Language Model Optimization</strong></p>
             </div>
 
-            <table>
+            <table class="llmo-comparison-table">
                 <thead>
                     <tr>
                         <th>Aspect</th>
@@ -3296,6 +4025,31 @@
                         <td><strong>Content Style</strong></td>
                         <td>SEO-optimized copy</td>
                         <td>Natural, authoritative language</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Structure</strong></td>
+                        <td>Keyword-rich headlines, meta descriptions, alt text</td>
+                        <td>Question-answer format, clear context markers, structured data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>User Intent</strong></td>
+                        <td>Match keywords to search queries</td>
+                        <td>Understand and answer underlying questions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Link Building</strong></td>
+                        <td>Focus on quantity and authority of backlinks</td>
+                        <td>Emphasis on contextual references and citations</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Length</strong></td>
+                        <td>Often prioritizes longer content for ranking</td>
+                        <td>Values concise, direct answers with supporting context</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Focus</strong></td>
+                        <td>Site speed, mobile optimization, XML sitemaps</td>
+                        <td>Structured data, semantic HTML, clear content hierarchy</td>
                     </tr>
                 </tbody>
             </table>
@@ -3414,7 +4168,7 @@
             </div>
 
             <h3>Critical SEO/CRO Issues</h3>
-            <table>
+            <table class="data-table">
                 <thead>
                     <tr>
                         <th>Focus Area</th>
@@ -3442,7 +4196,7 @@
             </table>
 
             <h3>Infrastructure & Compliance</h3>
-            <table>
+            <table class="data-table">
                 <thead>
                     <tr>
                         <th>Component</th>
@@ -3533,7 +4287,7 @@
             </div>
 
             <h3>Content Distribution Matrix</h3>
-            <table>
+            <table class="content-table">
                 <thead>
                     <tr>
                         <th>Format</th>
@@ -3719,7 +4473,7 @@
             <h1><span class="emoji">📊</span>Traditional KPIs & LLMO-Specific Analytics</h1>
             
             <h3>Traditional KPIs & Conversion Metrics</h3>
-            <table>
+            <table class="kpi-table">
                 <thead>
                     <tr>
                         <th>KPI</th>
@@ -3771,7 +4525,7 @@
             </ul>
 
             <h3>Governance & Optimization Cycle</h3>
-            <table>
+            <table class="data-table">
                 <thead>
                     <tr>
                         <th>Frequency</th>
