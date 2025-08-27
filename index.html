@@ -98,6 +98,156 @@
             scroll-behavior: smooth;
             font-size: 20px;
             font-weight: 400;
+            position: relative;
+        }
+
+        /* Multiple Rotating UAGC Logos Background */
+        
+        /* Large center logo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 900px;
+            height: 900px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.02;
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: logoRotate 70s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Medium top-right logo */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 10%;
+            right: 15%;
+            width: 300px;
+            height: 300px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.04;
+            transform: rotate(0deg);
+            animation: logoRotateClockwise 45s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Logo animations */
+        @keyframes logoRotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes logoRotateClockwise {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes logoRotateCounter {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        @keyframes logoRotateFast {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes logoRotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+         /* Additional logo elements using other containers */
+         
+                 /* Small bottom-left logo */
+        .presentation-container::before {
+            content: '';
+            position: fixed;
+            bottom: 15%;
+            left: 10%;
+            width: 200px;
+            height: 200px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.03;
+            transform: rotate(0deg);
+            animation: logoRotateCounter 35s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+                 /* Medium bottom-right logo */
+        .presentation-container::after {
+            content: '';
+            position: fixed;
+            bottom: 20%;
+            right: 5%;
+            width: 250px;
+            height: 250px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.025;
+            transform: rotate(0deg);
+            animation: logoRotateFast 25s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+                 /* Tiny top-left logo */
+        .toc-overlay::before {
+            content: '';
+            position: fixed;
+            top: 5%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.04;
+            transform: rotate(0deg);
+            animation: logoRotateSlow 80s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+                 /* Medium-large center-left logo */
+        .slide::before {
+            content: '';
+            position: fixed;
+            top: 30%;
+            left: 2%;
+            width: 350px;
+            height: 350px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.02;
+            transform: rotate(0deg);
+            animation: logoRotateClockwise 55s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+                 /* Small center-right logo */
+        .slide:nth-child(even)::after {
+            content: '';
+            position: fixed;
+            top: 60%;
+            right: 8%;
+            width: 180px;
+            height: 180px;
+            background: url('UAGC-A-logo.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0.035;
+            transform: rotate(0deg);
+            animation: logoRotateCounter 40s linear infinite;
+            z-index: 1;
+            pointer-events: none;
         }
 
         /* Animated pixel background */
@@ -3346,13 +3496,8 @@
             <a href="#title" class="toc-item">🎓 Title & Executive Summary</a>
             <a href="#llm-overview" class="toc-item">🤖 Understanding LLMs & LLMO</a>
             <a href="#framework" class="toc-item">🏗️ Four-Pillar Strategic Framework</a>
-            <a href="#technical" class="toc-item">🔧 Technical Foundation</a>
-            <a href="#content" class="toc-item">📝 Content Strategy</a>
-            <a href="#brand" class="toc-item">🎯 Brand Strategy</a>
-            <a href="#analytics" class="toc-item">📈 Measurement & Analytics</a>
             <a href="#roadmap" class="toc-item">🛣️ Implementation Roadmap</a>
             <a href="#examples" class="toc-item">🎓 Practical Examples</a>
-            <a href="#action" class="toc-item">⚡ Call to Action</a>
             <a href="#citations" class="toc-item">📚 Citations & Data Sources</a>
         </div>
     </div>
@@ -4021,7 +4166,7 @@
 
 
 
-        <!-- Four-Pillar Framework -->
+        <!-- Four-Pillar Strategic Framework -->
         <section class="slide fade-in">
             <h1><span class="emoji">🏗️</span>Four-Pillar Strategic Framework</h1>
             
@@ -4029,462 +4174,722 @@
                 <p><strong>A comprehensive approach to Large Language Model Optimization (LLMO) for higher education institutions</strong></p>
             </div>
             
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h3>1. Technical Foundation</h3>
-                    <p><strong>Making your website AI-readable and discoverable</strong></p>
-                    <ul>
-                        <li>Clean, structured HTML that AI models can easily understand</li>
-                        <li>Fast loading speeds and mobile optimization</li>
-                        <li>Clear content hierarchy with proper headings</li>
-                    </ul>
+            <div class="framework-grid">
+                <!-- Pillar 1: Technical Foundation -->
+                <div class="pillar-card technical">
+                    <div class="pillar-header">
+                        <span class="pillar-icon">🔧</span>
+                        <h3>Technical Foundation</h3>
+                        <p class="pillar-subtitle">Making your website AI-readable and discoverable</p>
+                    </div>
+                    
+                    <div class="pillar-content">
+                        <h4>Core Requirements:</h4>
+                        <ul class="compact-list">
+                            <li><strong>Clean HTML:</strong> Proper headings (H1, H2, H3) and structure</li>
+                            <li><strong>Fast Loading:</strong> Under 2 seconds for full crawling</li>
+                            <li><strong>Mobile-Optimized:</strong> Responsive design for all devices</li>
+                            <li><strong>Descriptive Meta:</strong> Clear page titles and descriptions</li>
+                        </ul>
+                        
+                        <h4>Quick Implementation:</h4>
+                        <ul class="compact-list">
+                            <li>Audit website structure and speed</li>
+                            <li>Reorganize content with clear headings</li>
+                            <li>Add structured data markup</li>
+                            <li>Implement analytics tracking</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h3>2. Content Strategy</h3>
-                    <p><strong>Creating authority-building content that AI models trust and cite</strong></p>
-                    <ul>
-                        <li>Faculty expertise showcased through research articles</li>
-                        <li>Student success stories with specific data</li>
-                        <li>Educational guides that answer common questions</li>
-                    </ul>
+
+                <!-- Pillar 2: Content Strategy -->
+                <div class="pillar-card content">
+                    <div class="pillar-header">
+                        <span class="pillar-icon">📝</span>
+                        <h3>Content Strategy</h3>
+                        <p class="pillar-subtitle">Creating content that AI models trust and cite</p>
+                    </div>
+                    
+                    <div class="pillar-content">
+                        <h4>AI-Friendly Content Types:</h4>
+                        <ul class="compact-list">
+                            <li><strong>Educational Guides:</strong> "How to Choose Online Programs"</li>
+                            <li><strong>Faculty Expertise:</strong> Research articles and professional insights</li>
+                            <li><strong>Success Stories:</strong> Quantified student outcomes and achievements</li>
+                            <li><strong>Institutional Data:</strong> Accreditation, outcomes, and credentials</li>
+                        </ul>
+                        
+                        <h4>Optimization Example:</h4>
+                        <div class="mini-comparison">
+                            <p><strong>Before:</strong> <em>"UAGC offers flexible programs"</em></p>
+                            <p><strong>After:</strong> <em>"UAGC provides WASC-accredited online degrees. 78% of graduates are working professionals."</em></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h3>3. Brand Strategy</h3>
-                    <p><strong>Building digital authority and managing online reputation</strong></p>
-                    <ul>
-                        <li>Consistent messaging across all digital platforms</li>
-                        <li>Transparent communication about institutional strengths</li>
-                        <li>Proactive reputation management and crisis response</li>
-                    </ul>
+
+                <!-- Pillar 3: Brand Strategy -->
+                <div class="pillar-card brand">
+                    <div class="pillar-header">
+                        <span class="pillar-icon">🎯</span>
+                        <h3>Brand Strategy</h3>
+                        <p class="pillar-subtitle">Building digital authority and managing reputation</p>
+                    </div>
+                    
+                    <div class="pillar-content">
+                        <h4>Authority Signals:</h4>
+                        <ul class="compact-list">
+                            <li><strong>Institutional Credibility:</strong> WASC accreditation, UA affiliation</li>
+                            <li><strong>Faculty Credentials:</strong> PhD qualifications, research publications</li>
+                            <li><strong>Transparent Communication:</strong> Honest reporting, progress updates</li>
+                            <li><strong>Community Engagement:</strong> Thought leadership, industry partnerships</li>
+                        </ul>
+                        
+                        <h4>Reputation Management:</h4>
+                        <ul class="compact-list">
+                            <li>Monitor online mentions and AI citations</li>
+                            <li>Respond rapidly to feedback and concerns</li>
+                            <li>Maintain consistent messaging across platforms</li>
+                            <li>Amplify student success stories</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="roadmap-item">
-                    <h3>4. Measurement & Analytics</h3>
-                    <p><strong>Tracking both traditional metrics and AI visibility</strong></p>
-                    <ul>
-                        <li>Monitor when AI models mention your institution</li>
-                        <li>Track content performance and citation frequency</li>
-                        <li>Measure brand sentiment in AI responses</li>
-                    </ul>
+
+                <!-- Pillar 4: Measurement & Analytics -->
+                <div class="pillar-card analytics">
+                    <div class="pillar-header">
+                        <span class="pillar-icon">📈</span>
+                        <h3>Measurement & Analytics</h3>
+                        <p class="pillar-subtitle">Tracking performance in the AI era</p>
+                    </div>
+                    
+                    <div class="pillar-content">
+                        <h4>AI-Era Metrics:</h4>
+                        <ul class="compact-list">
+                            <li><strong>AI Citation Tracking:</strong> Frequency and sentiment of mentions</li>
+                            <li><strong>Brand Association:</strong> Topics that trigger institution mentions</li>
+                            <li><strong>Content Performance:</strong> Which articles get cited most</li>
+                            <li><strong>Competitive Analysis:</strong> AI response comparisons</li>
+                        </ul>
+                        
+                        <h4>Traditional Metrics:</h4>
+                        <ul class="compact-list">
+                            <li>Search performance: 20-30% CTR improvement</li>
+                            <li>Website engagement: 15-25% time on site increase</li>
+                            <li>Lead generation: 25-35% form submission growth</li>
+                            <li>Brand awareness: 40-50% direct traffic boost</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+
         </section>
 
-        <!-- Pillar 1: Technical Foundation -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">🔧</span>Pillar 1: Technical Foundation</h1>
-            <p><em>Making your website AI-readable and discoverable</em></p>
+        <style>
+            .framework-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin: 2rem 0;
+            }
             
-            <h3>Why Technical Foundation Matters</h3>
-            <div class="highlight-box">
-                <p><strong>AI models learn from web content, but they can only "read" websites that are properly structured and accessible. Think of this as making your website "speak AI."</strong></p>
-            </div>
-
-            <h3>Key Technical Requirements</h3>
-            <div class="comparison-section">
-                <div class="metric-card">
-                    <h4>Website Structure</h4>
-                    <ul>
-                        <li><strong>Clean HTML:</strong> Use proper headings (H1, H2, H3) to organize content</li>
-                        <li><strong>Fast Loading:</strong> Websites that load in under 2 seconds are more likely to be fully crawled</li>
-                        <li><strong>Mobile-Friendly:</strong> Most AI training data comes from mobile-optimized sites</li>
-                        <li><strong>Clear Navigation:</strong> Logical site structure helps AI understand content relationships</li>
-                    </ul>
-                </div>
-                <div class="metric-card">
-                    <h4>Content Organization</h4>
-                    <ul>
-                        <li><strong>Descriptive Headings:</strong> "UAGC Business Programs" instead of "Our Programs"</li>
-                        <li><strong>Structured Lists:</strong> Bullet points and numbered lists for easy parsing</li>
-                        <li><strong>Consistent Terminology:</strong> Always use full institutional names</li>
-                        <li><strong>Meta Descriptions:</strong> Clear, informative page descriptions</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Quick Implementation Steps</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>Month 1-2: Foundation</h4>
-                    <ul>
-                        <li>Audit current website structure</li>
-                        <li>Fix meta descriptions and page titles</li>
-                        <li>Improve site speed and mobile responsiveness</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Month 3-4: Enhancement</h4>
-                    <ul>
-                        <li>Reorganize content with clear headings</li>
-                        <li>Add structured data markup</li>
-                        <li>Implement analytics tracking</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Month 5-6: Optimization</h4>
-                    <ul>
-                        <li>Test and refine content structure</li>
-                        <li>Monitor AI crawling and indexing</li>
-                        <li>Continuous performance optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pillar 2: Content Strategy -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">📝</span>Pillar 2: Content Strategy</h1>
-            <p><em>Creating content that AI models trust and cite</em></p>
+            .pillar-card {
+                background: white;
+                border-radius: 16px;
+                padding: 1.5rem;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                border: 3px solid var(--light-gray);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
             
-            <h3>What Makes Content "AI-Friendly"</h3>
-            <div class="highlight-box">
-                <p><strong>AI models prioritize content that is factual, well-sourced, and provides clear answers to common questions. They especially value content from credible institutions with expertise.</strong></p>
-            </div>
-
-            <h3>Content Types That Work Best</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>Educational Guides</h4>
-                    <p>Comprehensive resources that answer student questions</p>
-                    <ul>
-                        <li>"How to Choose an Online Degree Program"</li>
-                        <li>"Understanding Regional Accreditation"</li>
-                        <li>"Financial Aid for Adult Learners"</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Faculty Expertise</h4>
-                    <p>Showcase institutional knowledge and authority</p>
-                    <ul>
-                        <li>Research articles by faculty members</li>
-                        <li>Expert interviews on industry trends</li>
-                        <li>Professional insights and commentary</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Student Success Stories</h4>
-                    <p>Real outcomes with specific, verifiable details</p>
-                    <ul>
-                        <li>Career advancement after graduation</li>
-                        <li>Specific skill development examples</li>
-                        <li>Quantified results and achievements</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Content Optimization Example</h3>
-            <div class="comparison-section">
-                <div class="before-after before">
-                    <h4>Before: Generic Marketing Copy</h4>
-                    <p><em>"UAGC offers flexible online programs for working adults."</em></p>
-                </div>
-                <div class="before-after after">
-                    <h4>After: AI-Optimized Content</h4>
-                    <p><em>"The University of Arizona Global Campus (UAGC) provides regionally accredited online degree programs through WASC accreditation. According to our 2024 student survey, 78% of UAGC graduates are working professionals who completed their degrees while maintaining full-time employment."</em></p>
-                </div>
-            </div>
-
-            <h4>Why This Works:</h4>
-            <ul>
-                <li>Specific institutional details and credentials</li>
-                <li>Statistical evidence from verifiable sources</li>
-                <li>Clear definitions and context</li>
-                <li>Concrete, measurable outcomes</li>
-            </ul>
-        </section>
-
-        <!-- Pillar 3: Brand Strategy -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">🎯</span>Pillar 3: Brand Strategy</h1>
-            <p><em>Building digital authority and managing online reputation</em></p>
+            .pillar-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                z-index: 1;
+            }
             
-            <h3>Digital Authority Building</h3>
-            <div class="highlight-box">
-                <p><strong>AI models rely on signals of credibility and authority when deciding which sources to cite. Strong digital authority makes your institution more likely to be referenced positively.</strong></p>
-            </div>
-
-            <h3>Key Authority Signals</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>Institutional Credibility</h4>
-                    <ul>
-                        <li><strong>Accreditation Emphasis:</strong> Highlight WASC regional accreditation</li>
-                        <li><strong>University Affiliation:</strong> Leverage University of Arizona connection</li>
-                        <li><strong>Faculty Credentials:</strong> Showcase PhD qualifications and research</li>
-                        <li><strong>Third-Party Recognition:</strong> Display awards and certifications</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Transparent Communication</h4>
-                    <ul>
-                        <li><strong>Honest Reporting:</strong> Share accurate outcomes data</li>
-                        <li><strong>Address Challenges:</strong> Acknowledge areas of improvement</li>
-                        <li><strong>Progress Updates:</strong> Document institutional growth</li>
-                        <li><strong>Student Focus:</strong> Demonstrate commitment to student success</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Community Engagement</h4>
-                    <ul>
-                        <li><strong>Thought Leadership:</strong> Participate in education discussions</li>
-                        <li><strong>Industry Partnerships:</strong> Collaborate with employers and organizations</li>
-                        <li><strong>Alumni Success:</strong> Maintain connections with graduates</li>
-                        <li><strong>Research Contributions:</strong> Publish relevant studies</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Reputation Management Framework</h3>
-            <div class="comparison-section">
-                <div class="metric-card">
-                    <h4>Proactive Strategies</h4>
-                    <ul>
-                        <li>Regular monitoring of online mentions</li>
-                        <li>Consistent messaging across platforms</li>
-                        <li>Faculty and staff social media guidelines</li>
-                        <li>Student success story amplification</li>
-                    </ul>
-                </div>
-                <div class="metric-card">
-                    <h4>Responsive Strategies</h4>
-                    <ul>
-                        <li>Rapid response to negative feedback</li>
-                        <li>Transparent crisis communication</li>
-                        <li>Fact-checking and correction protocols</li>
-                        <li>Stakeholder engagement during challenges</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pillar 4: Measurement & Analytics -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">📈</span>Pillar 4: Measurement & Analytics</h1>
-            <p><em>Tracking performance in the AI era</em></p>
+            .pillar-card.technical::before {
+                background: linear-gradient(90deg, var(--arizona-blue), var(--highlight-blue));
+            }
             
-            <h3>Understanding AI-Era Analytics</h3>
-            <div class="highlight-box">
-                <p><strong>Traditional web analytics focus on website visits and clicks. AI-era analytics track how often your institution is mentioned, cited, and recommended by AI models.</strong></p>
-            </div>
-
-            <h3>New Metrics to Track</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>AI Citation Tracking</h4>
-                    <p>Monitor when and how AI models mention your institution</p>
-                    <ul>
-                        <li>Frequency of mentions in AI responses</li>
-                        <li>Context and sentiment of mentions</li>
-                        <li>Accuracy of information provided</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Brand Association Analysis</h4>
-                    <p>Understand how AI connects your brand with topics</p>
-                    <ul>
-                        <li>Which topics trigger mentions of your institution</li>
-                        <li>Strength of association with positive attributes</li>
-                        <li>Competitive comparison in AI responses</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Content Performance</h4>
-                    <p>Measure how well your content performs in AI training</p>
-                    <ul>
-                        <li>Which articles get cited most often</li>
-                        <li>Faculty content that gains authority</li>
-                        <li>Student stories that resonate</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h3>Traditional Metrics Still Matter</h3>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Metric Type</th>
-                        <th>Key Indicators</th>
-                        <th>Target Improvement</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Search Performance</strong></td>
-                        <td>Click-through rates, search rankings</td>
-                        <td>20-30% improvement</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Website Engagement</strong></td>
-                        <td>Time on site, page views, bounce rate</td>
-                        <td>15-25% improvement</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Lead Generation</strong></td>
-                        <td>Form submissions, information requests</td>
-                        <td>25-35% increase</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Brand Awareness</strong></td>
-                        <td>Direct traffic, branded searches</td>
-                        <td>40-50% growth</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Measurement Timeline</h3>
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>Months 1-3: Baseline</h4>
-                    <ul>
-                        <li>Establish current AI visibility</li>
-                        <li>Set up monitoring tools</li>
-                        <li>Document initial metrics</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Months 4-9: Growth</h4>
-                    <ul>
-                        <li>Track improvement trends</li>
-                        <li>Adjust strategy based on data</li>
-                        <li>Optimize high-performing content</li>
-                    </ul>
-                </div>
-                <div class="roadmap-item">
-                    <h4>Months 10-12: Optimization</h4>
-                    <ul>
-                        <li>Fine-tune successful approaches</li>
-                        <li>Scale winning strategies</li>
-                        <li>Plan for long-term growth</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Implementation Roadmap -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">🛣️</span>Implementation Roadmap</h1>
+            .pillar-card.content::before {
+                background: linear-gradient(90deg, var(--river), var(--highlight-sky));
+            }
             
-            <div class="highlight-box">
-                <p><strong>A phased approach to implementing LLMO strategy over 12 months</strong></p>
-            </div>
+            .pillar-card.brand::before {
+                background: linear-gradient(90deg, var(--arizona-red), var(--highlight-orange));
+            }
             
-            <div class="roadmap">
-                <div class="roadmap-item">
-                    <h4>Phase 1: Foundation (Months 1-3)</h4>
-                    <ul>
-                        <li><strong>Technical Setup:</strong> Website optimization and analytics implementation</li>
-                        <li><strong>Content Audit:</strong> Assess current content and identify opportunities</li>
-                        <li><strong>Team Building:</strong> Recruit faculty experts and content creators</li>
-                        <li><strong>Baseline Measurement:</strong> Establish current AI visibility and performance metrics</li>
-                    </ul>
-                </div>
+            .pillar-card.analytics::before {
+                background: linear-gradient(90deg, var(--highlight-purple), var(--yellow));
+            }
+            
+            .pillar-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 32px rgba(171, 5, 32, 0.15);
+                border-color: var(--arizona-red);
+            }
+            
+            .pillar-header {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                position: relative;
+                z-index: 2;
+            }
+            
+            .pillar-icon {
+                font-size: 2.5rem;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            
+            .pillar-header h3 {
+                margin: 0 0 0.5rem 0;
+                color: var(--arizona-blue);
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+            
+            .pillar-subtitle {
+                margin: 0;
+                color: var(--dark-gray);
+                font-style: italic;
+                font-size: 0.9rem;
+            }
+            
+            .pillar-content {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .pillar-content h4 {
+                margin: 0 0 0.75rem 0;
+                color: var(--arizona-red);
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            
+            .compact-list {
+                margin: 0 0 1rem 0;
+                padding-left: 1rem;
+            }
+            
+            .compact-list li {
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                color: var(--dark-gray);
+            }
+            
+            .mini-comparison {
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                padding: 1rem;
+                border-radius: 8px;
+                margin-top: 0.5rem;
+            }
+            
+            .mini-comparison p {
+                margin: 0.25rem 0;
+                font-size: 0.85rem;
+                line-height: 1.3;
+            }
+            
+            .framework-summary {
+                margin-top: 2rem;
+                padding: 1.5rem;
+                background: linear-gradient(135deg, var(--highlight-sky), var(--yellow));
+                border-radius: 12px;
+                border: 3px solid var(--arizona-blue);
+            }
+            
+            .framework-summary h3 {
+                margin: 0 0 1rem 0;
+                color: var(--arizona-blue);
+                text-align: center;
+                font-size: 1.3rem;
+            }
+            
+            .timeline-condensed {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .timeline-item {
+                background: white;
+                padding: 1rem;
+                border-radius: 8px;
+                border-left: 4px solid var(--arizona-red);
+                font-size: 0.9rem;
+                color: var(--dark-gray);
+            }
+            
+            @media (max-width: 768px) {
+                .framework-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
                 
-                <div class="roadmap-item">
-                    <h4>Phase 2: Launch (Months 4-8)</h4>
-                    <ul>
-                        <li><strong>Content Creation:</strong> Develop educational guides and faculty expertise content</li>
-                        <li><strong>Brand Building:</strong> Implement authority signals and reputation management</li>
-                        <li><strong>Community Engagement:</strong> Begin participating in relevant online discussions</li>
-                        <li><strong>Monitoring:</strong> Track AI citations and content performance</li>
-                    </ul>
-                </div>
+                .pillar-icon {
+                    font-size: 2rem;
+                }
                 
-                <div class="roadmap-item">
-                    <h4>Phase 3: Scale (Months 9-12)</h4>
-                    <ul>
-                        <li><strong>Content Library:</strong> Build comprehensive resource collection</li>
-                        <li><strong>Authority Recognition:</strong> Achieve consistent AI citations and mentions</li>
-                        <li><strong>Performance Optimization:</strong> Refine strategies based on results</li>
-                        <li><strong>Sustainable Systems:</strong> Establish long-term content and monitoring processes</li>
-                    </ul>
+                .compact-list li {
+                    font-size: 0.85rem;
+                }
+            }
+        </style>
+
+
+
+        <!-- Implementation & Examples -->
+        <section class="slide fade-in" id="roadmap">
+            <h1><span class="emoji">🛣️</span>Implementation Roadmap & Practical Examples</h1>
+            
+            <div class="highlight-box">
+                <p><strong>A comprehensive 12-month strategy with real-world LLMO applications</strong></p>
+            </div>
+            
+            <div class="implementation-grid">
+                <!-- Timeline Section -->
+                <div class="timeline-section">
+                    <h3>📅 12-Month Implementation</h3>
+                    
+                    <div class="phase-timeline">
+                        <div class="phase-item foundation">
+                            <div class="phase-header">
+                                <span class="phase-number">1</span>
+                                <h4>Foundation</h4>
+                                <p class="phase-duration">Months 1-3</p>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Website technical optimization</li>
+                                <li>Content audit & gap analysis</li>
+                                <li>Faculty SME recruitment</li>
+                                <li>Baseline AI visibility measurement</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-item launch">
+                            <div class="phase-header">
+                                <span class="phase-number">2</span>
+                                <h4>Launch</h4>
+                                <p class="phase-duration">Months 4-8</p>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Educational content creation</li>
+                                <li>Faculty expertise showcasing</li>
+                                <li>Authority signal implementation</li>
+                                <li>AI citation tracking setup</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="phase-item scale">
+                            <div class="phase-header">
+                                <span class="phase-number">3</span>
+                                <h4>Scale</h4>
+                                <p class="phase-duration">Months 9-12</p>
+                            </div>
+                            <ul class="phase-tasks">
+                                <li>Content library expansion</li>
+                                <li>Performance optimization</li>
+                                <li>Sustainable systems establishment</li>
+                                <li>Long-term monitoring protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Examples Section -->
+                <div class="examples-section">
+                    <h3>🎯 Real-World Applications</h3>
+                    
+                    <div class="example-cards">
+                        <div class="example-card accreditation">
+                            <div class="example-header">
+                                <span class="example-icon">✅</span>
+                                <h4>Accreditation Query</h4>
+                            </div>
+                            <div class="example-content">
+                                <p class="query-text"><strong>Query:</strong> "Is UAGC accredited?"</p>
+                                <div class="optimized-response">
+                                    <h5>AI-Optimized Structure:</h5>
+                                    <ul>
+                                        <li><strong>Direct Answer:</strong> "Yes, WASC-accredited"</li>
+                                        <li><strong>Specifics:</strong> Regional accreditation details</li>
+                                        <li><strong>Benefits:</strong> Transfer credits, financial aid</li>
+                                        <li><strong>Verification:</strong> DOE recognition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-card faculty">
+                            <div class="example-header">
+                                <span class="example-icon">👨‍🏫</span>
+                                <h4>Faculty Authority</h4>
+                            </div>
+                            <div class="example-content">
+                                <p class="query-text"><strong>Goal:</strong> Establish expert credibility</p>
+                                <div class="optimized-response">
+                                    <h5>Key Elements:</h5>
+                                    <ul>
+                                        <li><strong>Credentials:</strong> PhD, institutional affiliation</li>
+                                        <li><strong>Impact:</strong> "200+ citations" quantified data</li>
+                                        <li><strong>Publications:</strong> Specific journals, years</li>
+                                        <li><strong>Recognition:</strong> Awards, industry acknowledgments</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="example-card programs">
+                            <div class="example-header">
+                                <span class="example-icon">🎓</span>
+                                <h4>Program Information</h4>
+                            </div>
+                            <div class="example-content">
+                                <p class="query-text"><strong>Query:</strong> "Best online business degrees"</p>
+                                <div class="optimized-response">
+                                    <h5>Content Strategy:</h5>
+                                    <ul>
+                                        <li><strong>Outcomes:</strong> "78% career advancement rate"</li>
+                                        <li><strong>Format:</strong> "100% online, flexible scheduling"</li>
+                                        <li><strong>Support:</strong> "24/7 student services"</li>
+                                        <li><strong>Value:</strong> "Industry-relevant curriculum"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h3>Key Success Metrics</h3>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">3x</span>
-                    <span class="stat-label">AI Citation Increase</span>
+            <!-- Success Metrics -->
+            <div class="metrics-summary">
+                <h3>🎯 Target Outcomes</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card primary">
+                        <span class="metric-number">3x</span>
+                        <span class="metric-label">AI Citation Increase</span>
+                        <p class="metric-detail">From baseline to measurable AI mentions</p>
+                    </div>
+                    <div class="metric-card secondary">
+                        <span class="metric-number">25%</span>
+                        <span class="metric-label">Website Traffic Growth</span>
+                        <p class="metric-detail">Organic search and direct visits</p>
+                    </div>
+                    <div class="metric-card tertiary">
+                        <span class="metric-number">50%</span>
+                        <span class="metric-label">Brand Mention Quality</span>
+                        <p class="metric-detail">Positive sentiment in AI responses</p>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">25%</span>
-                    <span class="stat-label">Website Traffic Growth</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">Brand Mention Improvement</span>
+            </div>
+
+            <!-- Why This Works -->
+            <div class="success-factors">
+                <h4>🔑 Success Principles</h4>
+                <div class="factors-grid">
+                    <div class="factor-item">
+                        <strong>Direct Answers:</strong> AI prioritizes clear, immediate responses
+                    </div>
+                    <div class="factor-item">
+                        <strong>Verifiable Data:</strong> Numbers and third-party validation build trust
+                    </div>
+                    <div class="factor-item">
+                        <strong>Authority Signals:</strong> Credentials and recognition establish expertise
+                    </div>
+                    <div class="factor-item">
+                        <strong>Structured Format:</strong> Organized content is easier for AI to parse
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Practical LLMO Examples -->
-        <section class="slide fade-in">
-            <h1><span class="emoji">🎓</span>Practical LLMO Examples</h1>
+        <style>
+            .implementation-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin: 2rem 0;
+            }
             
-            <h3>Content Optimization in Action</h3>
+            .timeline-section h3,
+            .examples-section h3 {
+                margin: 0 0 1.5rem 0;
+                color: var(--arizona-blue);
+                font-size: 1.2rem;
+                border-bottom: 2px solid var(--highlight-orange);
+                padding-bottom: 0.5rem;
+            }
             
-            <h4>Example 1: Accreditation Query</h4>
-            <div class="highlight-box">
-                <p><strong>Query:</strong> "Is UAGC accredited?"</p>
-                <p><strong>Optimized Response Structure:</strong></p>
-                <ul>
-                    <li>Direct answer: "Yes, UAGC is fully accredited by WASC"</li>
-                    <li>Specific details: Regional accreditation type and recognition</li>
-                    <li>Student benefits: Transfer credits, financial aid eligibility</li>
-                    <li>Verification: Department of Education recognition</li>
-                </ul>
-            </div>
-
-            <h4>Example 2: Faculty Authority Content</h4>
-            <div class="highlight-box">
-                <p><strong>Key Elements for AI Recognition:</strong></p>
-                <ul>
-                    <li><strong>Credentials:</strong> Full degree titles and institutional affiliations</li>
-                    <li><strong>Quantified Impact:</strong> "200+ academic citations" or "23% improvement in student outcomes"</li>
-                    <li><strong>Recent Publications:</strong> Specific journal names and publication years</li>
-                    <li><strong>Professional Recognition:</strong> Awards and industry acknowledgments</li>
-                </ul>
-            </div>
-
-            <h4>Why These Examples Work</h4>
-            <ul>
-                <li><strong>Direct Answers:</strong> Clear, immediate responses to common questions</li>
-                <li><strong>Verifiable Data:</strong> Specific numbers and third-party validation</li>
-                <li><strong>Authority Signals:</strong> Institutional credentials and expert recognition</li>
-                <li><strong>Structured Format:</strong> Easy for AI models to parse and understand</li>
-            </ul>
-        </section>
-
-
-
-        <!-- Call to Action -->
-        <section class="slide cta-section">
-            <h1><span class="emoji">⚡</span>Call to Action</h1>
+            .phase-timeline {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
             
-            <h3>Immediate Next Steps (30 Days)</h3>
-            <ol>
-                <li><strong>Approve LLMO Strategy</strong> and resource allocation</li>
-                <li><strong>Assign Implementation Team</strong> with dedicated roles</li>
-                <li><strong>Begin Technical Foundation</strong> with meta-description fixes</li>
-                <li><strong>Identify Faculty SMEs</strong> for content creation program</li>
-            </ol>
+            .phase-item {
+                background: white;
+                border-radius: 12px;
+                padding: 1rem;
+                border-left: 4px solid var(--arizona-red);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+            
+            .phase-item:hover {
+                transform: translateX(4px);
+                box-shadow: 0 4px 16px rgba(171, 5, 32, 0.15);
+            }
+            
+            .phase-item.foundation {
+                border-left-color: var(--arizona-blue);
+            }
+            
+            .phase-item.launch {
+                border-left-color: var(--highlight-orange);
+            }
+            
+            .phase-item.scale {
+                border-left-color: var(--river);
+            }
+            
+            .phase-header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .phase-number {
+                background: var(--arizona-red);
+                color: white;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 0.9rem;
+            }
+            
+            .phase-header h4 {
+                margin: 0;
+                color: var(--arizona-blue);
+                font-size: 1rem;
+            }
+            
+            .phase-duration {
+                margin: 0;
+                color: var(--dark-gray);
+                font-size: 0.8rem;
+                font-style: italic;
+                margin-left: auto;
+            }
+            
+            .phase-tasks {
+                margin: 0;
+                padding-left: 1rem;
+                list-style: none;
+            }
+            
+            .phase-tasks li {
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                color: var(--dark-gray);
+                position: relative;
+            }
+            
+            .phase-tasks li::before {
+                content: '▶';
+                color: var(--arizona-red);
+                margin-right: 0.5rem;
+                font-size: 0.7rem;
+            }
+            
+            .example-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .example-card {
+                background: white;
+                border-radius: 12px;
+                padding: 1rem;
+                border: 2px solid var(--light-gray);
+                transition: all 0.3s ease;
+            }
+            
+            .example-card:hover {
+                border-color: var(--arizona-red);
+                box-shadow: 0 4px 16px rgba(171, 5, 32, 0.1);
+            }
+            
+            .example-header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .example-icon {
+                font-size: 1.5rem;
+                background: var(--highlight-sky);
+                padding: 0.5rem;
+                border-radius: 8px;
+            }
+            
+            .example-header h4 {
+                margin: 0;
+                color: var(--arizona-blue);
+                font-size: 1rem;
+            }
+            
+            .query-text {
+                margin: 0 0 0.75rem 0;
+                font-style: italic;
+                color: var(--dark-gray);
+                font-size: 0.9rem;
+            }
+            
+            .optimized-response h5 {
+                margin: 0 0 0.5rem 0;
+                color: var(--arizona-red);
+                font-size: 0.9rem;
+            }
+            
+            .optimized-response ul {
+                margin: 0;
+                padding-left: 1rem;
+            }
+            
+            .optimized-response li {
+                margin-bottom: 0.3rem;
+                font-size: 0.85rem;
+                line-height: 1.3;
+                color: var(--dark-gray);
+            }
+            
+            .metrics-summary {
+                margin: 2rem 0;
+                padding: 1.5rem;
+                background: linear-gradient(135deg, var(--highlight-sky), var(--yellow));
+                border-radius: 12px;
+                border: 3px solid var(--arizona-blue);
+            }
+            
+            .metrics-summary h3 {
+                margin: 0 0 1rem 0;
+                color: var(--arizona-blue);
+                text-align: center;
+            }
+            
+            .metrics-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+            
+            .metric-card {
+                background: white;
+                padding: 1rem;
+                border-radius: 8px;
+                text-align: center;
+                border: 2px solid var(--arizona-red);
+            }
+            
+            .metric-number {
+                display: block;
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--arizona-red);
+                margin-bottom: 0.25rem;
+            }
+            
+            .metric-label {
+                display: block;
+                font-weight: 600;
+                color: var(--arizona-blue);
+                margin-bottom: 0.25rem;
+                font-size: 0.9rem;
+            }
+            
+            .metric-detail {
+                margin: 0;
+                font-size: 0.8rem;
+                color: var(--dark-gray);
+                line-height: 1.2;
+            }
+            
+            .success-factors {
+                margin-top: 1.5rem;
+                padding: 1rem;
+                background: white;
+                border-radius: 8px;
+                border: 2px solid var(--highlight-orange);
+            }
+            
+            .success-factors h4 {
+                margin: 0 0 1rem 0;
+                color: var(--arizona-blue);
+                text-align: center;
+            }
+            
+            .factors-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            
+            .factor-item {
+                padding: 0.75rem;
+                background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+                border-radius: 6px;
+                font-size: 0.9rem;
+                color: var(--dark-gray);
+                line-height: 1.4;
+            }
+            
+            @media (max-width: 768px) {
+                .implementation-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+                
+                .metrics-grid {
+                    grid-template-columns: 1fr;
+                    gap: 0.75rem;
+                }
+                
+                .factors-grid {
+                    grid-template-columns: 1fr;
+                    gap: 0.75rem;
+                }
+                
+                .phase-header {
+                    flex-wrap: wrap;
+                }
+                
+                .phase-duration {
+                    margin-left: 0;
+                    width: 100%;
+                }
+            }
+        </style>
 
-            <div class="highlight-box">
-                <p><strong>The Window of Opportunity:</strong> AI adoption in education is accelerating rapidly. Universities that act now will establish dominant positions in AI-driven student discovery. Those that wait will find themselves invisible in an AI-first world.</p>
-            </div>
 
-            <h3>Leadership Questions</h3>
-            <ol>
-                <li>Are we ready to lead in AI optimization, or will we follow competitors?</li>
-                <li>How do we leverage our UA affiliation for maximum AI authority?</li>
-                <li>What faculty incentives will drive quality content creation?</li>
-                <li>How do we measure success in this new landscape?</li>
-            </ol>
 
-            <a href="#" class="cta-button">Approve Strategy</a>
-            <a href="#" class="cta-button">Schedule Implementation Meeting</a>
-        </section>
+
 
         <!-- Final Summary -->
         <section class="slide fade-in">
