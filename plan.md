@@ -53,7 +53,9 @@ Traditional search engines return lists of links. **AI-powered search** provides
 
 These four foundational principles guide how we optimize UAGC's content to be discovered, trusted, and cited by AI systems. Each principle addresses a specific aspect of how Large Language Models process and prioritize information.
 
----
+<table>
+<tr>
+<td width="50%" valign="top">
 
 #### 🎯 **Principle 1: Content Clarity & Structure**
 *Making our content AI-readable and user-friendly*
@@ -61,14 +63,15 @@ These four foundational principles guide how we optimize UAGC's content to be di
 **The Challenge:** LLMs need well-organized information with logical flow to understand and quote content accurately.
 
 **Our Implementation:**
-- **Descriptive Headlines** → Use clear H1-H3 tags that summarize content sections
-- **Scannable Format** → Organize information with bullet points, numbered lists, and short paragraphs  
+- **Descriptive Headlines** → Clear H1-H3 tags that summarize content sections
+- **Scannable Format** → Bullet points, numbered lists, short paragraphs  
 - **Consistent Language** → Standardize terminology across all UAGC content
 - **Verified Facts** → Include proper attribution for all statistics and claims
 
 **UAGC Example:** Instead of "flexible programs," use "asynchronous online degree programs that allow 24/7 access to coursework"
 
----
+</td>
+<td width="50%" valign="top">
 
 #### 🏛️ **Principle 2: Entity Alignment & Semantic Consistency**
 *Building strong connections between UAGC and key education topics*
@@ -85,7 +88,10 @@ These four foundational principles guide how we optimize UAGC's content to be di
 
 **UAGC Example:** Connect all military content to "UAGC military education services" rather than using varied terms
 
----
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 #### 📊 **Principle 3: Statistical Evidence & Expert Quotes**
 *Providing the data and expertise that AI systems trust*
@@ -100,7 +106,8 @@ These four foundational principles guide how we optimize UAGC's content to be di
 
 **UAGC Example:** "Dr. Sarah Johnson's research shows that structured military student support increases graduation rates by 23%"
 
----
+</td>
+<td width="50%" valign="top">
 
 #### 🌐 **Principle 4: Digital Authority Building**
 *Establishing UAGC as a trusted source across the internet*
@@ -115,7 +122,9 @@ These four foundational principles guide how we optimize UAGC's content to be di
 
 **UAGC Example:** Guest articles on Inside Higher Ed about military student success, Wikipedia page optimization, University of Arizona partnership content
 
----
+</td>
+</tr>
+</table>
 
 **💡 Key Takeaway:** These principles work together to make UAGC's content more discoverable and trustworthy for both AI systems and prospective students. Success requires consistent application across all content types and channels.
 
