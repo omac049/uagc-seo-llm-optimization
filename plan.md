@@ -120,34 +120,58 @@ Traditional search engines return lists of links. **AI-powered search** provides
 
 ### Core LLMO Principles
 
-These four foundational principles guide how we optimize UAGC's content to be discovered, trusted, and cited by AI systems. Each principle addresses a specific aspect of how Large Language Models process and prioritize information.
+These four foundational principles form the strategic framework for optimizing UAGC's content to be discovered, trusted, and cited by AI systems. Each principle targets a specific aspect of how Large Language Models process and prioritize information.
 
-<table>
+---
+
+## 🎯 **PRINCIPLE 1** | Content Clarity & Structure
+> *Making our content AI-readable and user-friendly*
+
+<table width="100%">
 <tr>
-<td width="50%" valign="top">
+<td width="30%" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
 
-#### 🎯 **Principle 1: Content Clarity & Structure**
-*Making our content AI-readable and user-friendly*
+**🚩 The Challenge**
 
-**The Challenge:** LLMs need well-organized information with logical flow to understand and quote content accurately.
+LLMs need well-organized information with logical flow to understand and quote content accurately.
 
-**Our Implementation:**
+</td>
+<td width="40%" style="padding: 15px;">
+
+**⚡ Our Implementation**
 - **Descriptive Headlines** → Clear H1-H3 tags that summarize content sections
 - **Scannable Format** → Bullet points, numbered lists, short paragraphs  
 - **Consistent Language** → Standardize terminology across all UAGC content
 - **Verified Facts** → Include proper attribution for all statistics and claims
 
-**UAGC Example:** Instead of "flexible programs," use "asynchronous online degree programs that allow 24/7 access to coursework"
+</td>
+<td width="30%" style="background-color: #e8f4f8; padding: 15px; border-radius: 8px;">
+
+**💡 UAGC Example**
+
+Instead of "flexible programs," use "asynchronous online degree programs that allow 24/7 access to coursework"
 
 </td>
-<td width="50%" valign="top">
+</tr>
+</table>
 
-#### 🏛️ **Principle 2: Entity Alignment & Semantic Consistency**
-*Building strong connections between UAGC and key education topics*
+---
 
-**The Challenge:** LLMs learn relationships between institutions, concepts, and expertise areas. Consistent messaging strengthens these connections.
+## 🏛️ **PRINCIPLE 2** | Entity Alignment & Semantic Consistency
+> *Building strong connections between UAGC and key education topics*
 
-**Our Implementation:**
+<table width="100%">
+<tr>
+<td width="30%" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+
+**🚩 The Challenge**
+
+LLMs learn relationships between institutions, concepts, and expertise areas. Consistent messaging strengthens these connections.
+
+</td>
+<td width="40%" style="padding: 15px;">
+
+**⚡ Our Implementation**
 - **Brand Consistency** → Always use "University of Arizona Global Campus (UAGC)" in first mention
 - **Topic Authority** → Group related content around core strengths:
   - Military education and veteran support services
@@ -155,47 +179,101 @@ These four foundational principles guide how we optimize UAGC's content to be di
   - Adult learner and working professional education
 - **Credibility Markers** → Highlight WASC accreditation, University of Arizona affiliation, faculty credentials
 
-**UAGC Example:** Connect all military content to "UAGC military education services" rather than using varied terms
-
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="30%" style="background-color: #e8f4f8; padding: 15px; border-radius: 8px;">
 
-#### 📊 **Principle 3: Statistical Evidence & Expert Quotes**
-*Providing the data and expertise that AI systems trust*
+**💡 UAGC Example**
 
-**The Challenge:** LLMs prioritize content with verifiable data and expert opinions when generating responses.
-
-**Our Implementation:**
-- **Research Integration** → Include specific studies: "According to UAGC's 2024 student outcomes report, 78% of graduates..."
-- **Faculty Voices** → Feature professor expertise and research in content
-- **Outcome Transparency** → Share concrete data on graduation rates, employment outcomes, student satisfaction
-- **Third-Party Validation** → Include quotes from accrediting bodies, employer partners, alumni
-
-**UAGC Example:** "Dr. Sarah Johnson's research shows that structured military student support increases graduation rates by 23%"
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌐 **Principle 4: Digital Authority Building**
-*Establishing UAGC as a trusted source across the internet*
-
-**The Challenge:** AI systems evaluate institutional credibility based on external recognition and web presence.
-
-**Our Implementation:**
-- **Quality Backlinks** → Earn citations from reputable educational websites and news sources
-- **Media Presence** → Secure coverage in credible publications about online education trends
-- **Academic Partnerships** → Collaborate with other institutions and publish joint research
-- **Recognition Programs** → Pursue awards and certifications (Military Friendly Schools, etc.)
-
-**UAGC Example:** Guest articles on Inside Higher Ed about military student success, Wikipedia page optimization, University of Arizona partnership content
+Connect all military content to "UAGC military education services" rather than using varied terms
 
 </td>
 </tr>
 </table>
 
-**💡 Key Takeaway:** These principles work together to make UAGC's content more discoverable and trustworthy for both AI systems and prospective students. Success requires consistent application across all content types and channels.
+---
+
+## 📊 **PRINCIPLE 3** | Statistical Evidence & Expert Quotes
+> *Providing the data and expertise that AI systems trust*
+
+<table width="100%">
+<tr>
+<td width="30%" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+
+**🚩 The Challenge**
+
+LLMs prioritize content with verifiable data and expert opinions when generating responses.
+
+</td>
+<td width="40%" style="padding: 15px;">
+
+**⚡ Our Implementation**
+- **Research Integration** → Include specific studies: "According to UAGC's 2024 student outcomes report, 78% of graduates..."
+- **Faculty Voices** → Feature professor expertise and research in content
+- **Outcome Transparency** → Share concrete data on graduation rates, employment outcomes, student satisfaction
+- **Third-Party Validation** → Include quotes from accrediting bodies, employer partners, alumni
+
+</td>
+<td width="30%" style="background-color: #e8f4f8; padding: 15px; border-radius: 8px;">
+
+**💡 UAGC Example**
+
+"Dr. Sarah Johnson's research shows that structured military student support increases graduation rates by 23%"
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🌐 **PRINCIPLE 4** | Digital Authority Building
+> *Establishing UAGC as a trusted source across the internet*
+
+<table width="100%">
+<tr>
+<td width="30%" style="background-color: #f8f9fa; padding: 15px; border-radius: 8px;">
+
+**🚩 The Challenge**
+
+AI systems evaluate institutional credibility based on external recognition and web presence.
+
+</td>
+<td width="40%" style="padding: 15px;">
+
+**⚡ Our Implementation**
+- **Quality Backlinks** → Earn citations from reputable educational websites and news sources
+- **Media Presence** → Secure coverage in credible publications about online education trends
+- **Academic Partnerships** → Collaborate with other institutions and publish joint research
+- **Recognition Programs** → Pursue awards and certifications (Military Friendly Schools, etc.)
+
+</td>
+<td width="30%" style="background-color: #e8f4f8; padding: 15px; border-radius: 8px;">
+
+**💡 UAGC Example**
+
+Guest articles on Inside Higher Ed about military student success, Wikipedia page optimization, University of Arizona partnership content
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🔄 **Principle Integration & Success Framework**
+
+| **Integration Level** | **Implementation Focus** | **Expected Outcome** |
+|----------------------|-------------------------|---------------------|
+| **Content Creation** | Apply all 4 principles to every piece of content | AI-quotable, authoritative content library |
+| **Brand Messaging** | Consistent entity alignment across all channels | Stronger topic associations in AI models |
+| **Authority Building** | Combine statistical evidence with digital presence | Enhanced trust signals for AI citation |
+| **Performance Optimization** | Clear structure + verified data + external validation | 30-40% increase in AI visibility |
+
+**🎯 Success Indicators:**
+- ✅ AI models consistently cite UAGC content
+- ✅ Brand mentions increase in AI-generated responses  
+- ✅ Content appears in competitive AI comparisons
+- ✅ Authority signals strengthen over 6-12 month cycles
+
+**💡 Key Takeaway:** These principles create a compound effect—each principle amplifies the others to make UAGC's content exponentially more discoverable and trustworthy for both AI systems and prospective students.
 
 ### LLMO vs. Traditional SEO
 
