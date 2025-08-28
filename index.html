@@ -1123,6 +1123,559 @@
             51%, 100% { opacity: 0.3; }
         }
 
+        /* Enhanced 80s Video Game Aesthetics */
+        
+        /* CRT Monitor Effects */
+        .crt-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at center, 
+                    transparent 0%, 
+                    rgba(0, 255, 0, 0.02) 50%, 
+                    rgba(0, 255, 0, 0.1) 100%);
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.6;
+            animation: crtFlicker 8s ease-in-out infinite;
+        }
+
+        .scanlines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 0, 0.08) 2px,
+                rgba(0, 255, 0, 0.08) 4px
+            );
+            pointer-events: none;
+            z-index: 2;
+            animation: scanlineMove 0.1s linear infinite;
+        }
+
+        .screen-flicker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0;
+            animation: screenFlicker 12s ease-in-out infinite;
+        }
+
+        @keyframes crtFlicker {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes scanlineMove {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(4px); }
+        }
+
+        @keyframes screenFlicker {
+            0%, 98%, 100% { opacity: 0; }
+            99% { opacity: 0.1; }
+        }
+
+        /* Enhanced HUD Elements */
+        .hud-blink {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--neon-green);
+            animation: hudBlink 1.5s ease-in-out infinite;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.8em;
+        }
+
+        .score-pulse {
+            margin-left: 10px;
+            color: var(--azurite);
+            text-shadow: 0 0 5px var(--azurite);
+            animation: scorePulse 2s ease-in-out infinite;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6em;
+        }
+
+        .energy-spark {
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 4px);
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--neon-green), 
+                transparent);
+            opacity: 0;
+            animation: energySpark 3s ease-in-out infinite;
+        }
+
+        @keyframes hudBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes scorePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        @keyframes energySpark {
+            0%, 90%, 100% { opacity: 0; transform: translateX(-100%); }
+            5%, 85% { opacity: 0.8; transform: translateX(100%); }
+        }
+
+        /* 80s Arcade Frame */
+        .arcade-frame {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            pointer-events: none;
+            z-index: 4;
+        }
+
+        .frame-corner {
+            position: absolute;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 2em;
+            color: var(--neon-cyan);
+            text-shadow: 
+                0 0 10px var(--neon-cyan),
+                0 0 20px var(--neon-cyan);
+            animation: cornerGlow 4s ease-in-out infinite;
+        }
+
+        .frame-corner.top-left { top: 0; left: 0; }
+        .frame-corner.top-right { top: 0; right: 0; }
+        .frame-corner.bottom-left { bottom: 0; left: 0; }
+        .frame-corner.bottom-right { bottom: 0; right: 0; }
+
+        .frame-glow {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border: 2px solid var(--neon-cyan);
+            border-radius: 15px;
+            opacity: 0.3;
+            animation: frameGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes cornerGlow {
+            0%, 100% { 
+                transform: scale(1);
+                text-shadow: 
+                    0 0 10px var(--neon-cyan),
+                    0 0 20px var(--neon-cyan);
+            }
+            50% { 
+                transform: scale(1.1);
+                text-shadow: 
+                    0 0 15px var(--neon-cyan),
+                    0 0 30px var(--neon-cyan),
+                    0 0 40px var(--neon-pink);
+            }
+        }
+
+        @keyframes frameGlow {
+            0%, 100% { 
+                opacity: 0.3;
+                box-shadow: 
+                    0 0 20px var(--neon-cyan),
+                    inset 0 0 20px var(--neon-cyan);
+            }
+            50% { 
+                opacity: 0.6;
+                box-shadow: 
+                    0 0 40px var(--neon-cyan),
+                    inset 0 0 40px var(--neon-cyan),
+                    0 0 60px var(--neon-pink);
+            }
+        }
+
+        /* Enhanced Pixel Logo */
+        .logo-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .retro-glow .pixel-text {
+            color: var(--neon-green);
+            text-shadow: 
+                0 0 5px var(--neon-green),
+                0 0 10px var(--neon-green),
+                0 0 15px var(--neon-green),
+                2px 2px 0px var(--bg-dark);
+            animation: pixelGlow 3s ease-in-out infinite alternate;
+            filter: drop-shadow(0 0 20px var(--neon-green));
+            position: relative;
+            z-index: 2;
+        }
+
+        .pixel-shadow {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .laser-beam {
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            right: -20px;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--neon-pink), 
+                var(--neon-yellow), 
+                var(--neon-pink), 
+                transparent);
+            opacity: 0;
+            animation: laserSweep 4s ease-in-out infinite;
+        }
+
+        .energy-orb {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, var(--neon-yellow), transparent);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            animation: energyOrb 5s ease-in-out infinite;
+        }
+
+        @keyframes laserSweep {
+            0%, 90%, 100% { opacity: 0; transform: translateX(-100%); }
+            10%, 80% { opacity: 1; transform: translateX(100%); }
+        }
+
+        @keyframes energyOrb {
+            0%, 80%, 100% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+            10%, 70% { opacity: 0.8; transform: translate(-50%, -50%) scale(1); }
+            40% { transform: translate(-50%, -50%) scale(1.5); }
+        }
+
+        /* Enhanced Game Title */
+        .game-title-container {
+            position: relative;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .title-backdrop {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+            height: calc(100% + 20px);
+            background: linear-gradient(45deg, 
+                var(--bg-purple), 
+                var(--bg-blue), 
+                var(--bg-purple));
+            opacity: 0.3;
+            border-radius: 15px;
+            animation: backdropPulse 8s ease-in-out infinite;
+        }
+
+        .retro-game-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 3em;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            letter-spacing: 3px;
+            text-shadow: 
+                0 0 0 #000000,
+                0 0 5px var(--neon-cyan),
+                0 0 10px var(--neon-cyan),
+                3px 3px 0px #000000,
+                -1px -1px 0px #000000,
+                1px -1px 0px #000000,
+                -1px 1px 0px #000000;
+            animation: subtleTitleGlow 6s ease-in-out infinite;
+        }
+
+        .title-glyph {
+            color: var(--neon-pink);
+            text-shadow: 
+                0 0 0 #000000,
+                0 0 5px var(--neon-pink),
+                0 0 8px var(--neon-pink),
+                2px 2px 0px #000000,
+                -1px -1px 0px #000000,
+                1px -1px 0px #000000,
+                -1px 1px 0px #000000;
+            animation: glyphPulse 3s ease-in-out infinite alternate;
+        }
+
+        .main-title {
+            color: #ffffff;
+            text-shadow: 
+                0 0 0 #000000,
+                0 0 8px var(--neon-cyan),
+                0 0 12px var(--neon-cyan),
+                3px 3px 0px #000000,
+                -2px -2px 0px #000000,
+                2px -2px 0px #000000,
+                -2px 2px 0px #000000;
+            position: relative;
+        }
+
+        .main-title::before {
+            content: 'A.I. ACADEMY';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-yellow), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.7;
+            animation: rainbowOverlay 8s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .electric-arc {
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent,
+                var(--neon-yellow),
+                var(--neon-pink),
+                var(--neon-green),
+                transparent);
+            opacity: 0;
+            animation: electricArc 3s ease-in-out infinite;
+        }
+
+        .neon-outline {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            height: calc(100% + 16px);
+            border: 2px solid var(--neon-pink);
+            border-radius: 8px;
+            opacity: 0;
+            animation: neonOutline 5s ease-in-out infinite;
+        }
+
+        @keyframes backdropPulse {
+            0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(1); }
+            50% { opacity: 0.5; transform: translateX(-50%) scale(1.05); }
+        }
+
+        @keyframes subtleTitleGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 0 #000000,
+                    0 0 5px var(--neon-cyan),
+                    0 0 10px var(--neon-cyan),
+                    3px 3px 0px #000000,
+                    -1px -1px 0px #000000,
+                    1px -1px 0px #000000,
+                    -1px 1px 0px #000000;
+            }
+            50% { 
+                text-shadow: 
+                    0 0 0 #000000,
+                    0 0 8px var(--neon-cyan),
+                    0 0 15px var(--neon-cyan),
+                    0 0 20px var(--neon-yellow),
+                    3px 3px 0px #000000,
+                    -1px -1px 0px #000000,
+                    1px -1px 0px #000000,
+                    -1px 1px 0px #000000;
+            }
+        }
+
+        @keyframes glyphPulse {
+            0% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% { 
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes rainbowOverlay {
+            0% { 
+                filter: hue-rotate(0deg);
+                opacity: 0.4;
+            }
+            25% {
+                opacity: 0.7;
+            }
+            50% { 
+                filter: hue-rotate(180deg);
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.6;
+            }
+            100% { 
+                filter: hue-rotate(360deg);
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes electricArc {
+            0%, 90%, 100% { opacity: 0; }
+            5%, 85% { opacity: 0.8; }
+        }
+
+        @keyframes neonOutline {
+            0%, 80%, 100% { opacity: 0; }
+            10%, 70% { opacity: 0.6; }
+        }
+
+        /* Enhanced Subtitle */
+        .subtitle-container {
+            position: relative;
+            margin: 30px 0;
+        }
+
+        .arcade-subtitle {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1.2em;
+            color: var(--neon-yellow);
+            text-align: center;
+            text-shadow: 
+                0 0 10px var(--neon-yellow),
+                0 0 20px var(--neon-yellow),
+                2px 2px 0px var(--bg-dark);
+            animation: subtitlePulse 3s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .blink-fast {
+            animation: fastBlink 1s ease-in-out infinite;
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        .retro-spin {
+            animation: retroSpin 4s linear infinite;
+            filter: drop-shadow(0 0 15px var(--arizona-red));
+        }
+
+        .subtitle-scanner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent);
+            opacity: 0;
+            animation: subtitleScan 6s ease-in-out infinite;
+        }
+
+        @keyframes subtitlePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes fastBlink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.2; }
+        }
+
+        @keyframes retroSpin {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(90deg) scale(1.1); }
+            50% { transform: rotate(180deg) scale(1); }
+            75% { transform: rotate(270deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+
+        @keyframes subtitleScan {
+            0%, 90%, 100% { opacity: 0; transform: translateX(-100%); }
+            10%, 80% { opacity: 0.3; transform: translateX(100%); }
+        }
+
+        /* Enhanced Mission Text */
+        .retro-mission {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1em;
+            color: var(--neon-green);
+            text-align: center;
+            text-shadow: 
+                0 0 5px var(--neon-green),
+                0 0 10px var(--neon-green),
+                1px 1px 0px var(--bg-dark);
+            animation: missionGlow 4s ease-in-out infinite alternate;
+            letter-spacing: 1px;
+            margin: 30px 0 !important;
+        }
+
+        .mission-bracket {
+            color: var(--neon-pink);
+            text-shadow: 
+                0 0 5px var(--neon-pink),
+                0 0 10px var(--neon-pink);
+            animation: bracketFlash 2s ease-in-out infinite;
+            font-size: 1.2em;
+        }
+
+        @keyframes missionGlow {
+            0% { 
+                text-shadow: 
+                    0 0 5px var(--neon-green),
+                    0 0 10px var(--neon-green),
+                    1px 1px 0px var(--bg-dark);
+            }
+            100% { 
+                text-shadow: 
+                    0 0 10px var(--neon-green),
+                    0 0 20px var(--neon-green),
+                    0 0 30px var(--neon-yellow),
+                    1px 1px 0px var(--bg-dark);
+            }
+        }
+
+        @keyframes bracketFlash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
         .presentation-meta {
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -3702,46 +4255,98 @@
     <div class="presentation-container">
         <!-- Title Slide -->
         <section class="slide title-slide" id="title">
-            <!-- Game HUD Elements -->
+            <!-- Enhanced 80s CRT Overlay -->
+            <div class="crt-overlay"></div>
+            <div class="scanlines"></div>
+            <div class="screen-flicker"></div>
+            
+            <!-- Enhanced Game HUD Elements -->
             <div class="game-hud">
                 <div class="level-indicator">
+                    <div class="hud-blink">◄</div>
                     <span class="level-text">LVL</span>
                     <span class="level-number">2025</span>
+                    <div class="hud-blink">►</div>
                 </div>
                 <div class="score-display">
                     <span class="score-label">MISSION:</span>
                     <span class="score-value">LLMO</span>
+                    <div class="score-pulse">●●●</div>
                 </div>
                 <div class="health-bar">
-                    <div class="health-label">ENGAGEMENT</div>
+                    <div class="health-label">POWER</div>
                     <div class="health-container">
                         <div class="health-fill"></div>
+                        <div class="energy-spark"></div>
                     </div>
                 </div>
             </div>
             
+            <!-- 80s Arcade Border Frame -->
+            <div class="arcade-frame">
+                <div class="frame-corner top-left">╔</div>
+                <div class="frame-corner top-right">╗</div>
+                <div class="frame-corner bottom-left">╚</div>
+                <div class="frame-corner bottom-right">╝</div>
+                <div class="frame-glow"></div>
+            </div>
+            
+            <!-- Enhanced Pixel Logo with 80s Styling -->
             <div class="pixel-logo">
-                <div class="ascii-art">
-                    <pre>
-██╗     ██╗     ███╗   ███╗ ██████╗ 
-██║     ██║     ████╗ ████║██╔═══██╗
-██║     ██║     ██╔████╔██║██║   ██║
-██║     ██║     ██║╚██╔╝██║██║   ██║
-███████╗███████╗██║ ╚═╝ ██║╚██████╔╝
-╚══════╝╚══════╝╚═╝     ╚═╝ ╚═════╝ 
-                    </pre>
-                </div>
-                <div class="logo-effects">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
+                <div class="logo-container">
+                    <div class="ascii-art retro-glow">
+                        <pre class="pixel-text">
+██╗   ██╗ █████╗  ██████╗  ██████╗
+██║   ██║██╔══██╗██╔════╝ ██╔════╝
+██║   ██║███████║██║  ███╗██║     
+██║   ██║██╔══██║██║   ██║██║     
+╚██████╔╝██║  ██║╚██████╔╝╚██████╗
+ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝
+                        </pre>
+                        <div class="pixel-shadow"></div>
+                    </div>
+                    <div class="logo-effects">
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="particle"></div>
+                        <div class="laser-beam"></div>
+                        <div class="energy-orb"></div>
+                    </div>
                 </div>
             </div>
             
-            <h1 class="glitch-text">◄► AI PLAYBOOK ◄►</h1>
-            <h2 class="subtitle-glow">LEVEL UP <img src="logo-2.png" alt="UAGC Logo" class="inline-logo"></h2>
-            <h3 class="mission-text">~ MASTERING LARGE LANGUAGE MODELS ~</h3>
+            <!-- Enhanced 80s Game Title -->
+            <div class="game-title-container">
+                <div class="title-backdrop"></div>
+                <h1 class="retro-game-title">
+                    <span class="title-glyph">◄◄</span>
+                    <span class="main-title">A.I. ACADEMY</span>
+                    <span class="title-glyph">►►</span>
+                </h1>
+                <div class="title-effects">
+                    <div class="electric-arc"></div>
+                    <div class="neon-outline"></div>
+                </div>
+            </div>
+            
+            <div class="subtitle-container">
+                <h2 class="arcade-subtitle">
+                    <span class="blink-fast">▼</span>
+                    POWER UP YOUR STRATEGY
+                    <span class="blink-fast">▼</span>
+                    <img src="logo-2.png" alt="UAGC Logo" class="inline-logo retro-spin">
+                </h2>
+                <div class="subtitle-scanner"></div>
+            </div>
+            
+            <h3 class="mission-text retro-mission">
+                <span class="mission-bracket">[</span>
+                MASTERING LARGE LANGUAGE MODELS
+                <span class="mission-bracket">]</span>
+            </h3>
             
             <div class="game-style-info">
                 <div class="info-box">
@@ -5262,18 +5867,6 @@
                         </div>
                     </div>
                     
-                    <div class="citation-item" id="internal-analysis">
-                        <div class="citation-number">[UAGC-1]</div>
-                        <div class="citation-content">
-                            <h4>Brand Transformation Potential Assessment</h4>
-                            <p><strong>UAGC Internal Strategic Analysis</strong></p>
-                            <p>Published: 2024 (Internal Projection)</p>
-                            <p>Methodology: Comprehensive market analysis combining competitive positioning, institutional assets, LLMO opportunity assessment, and digital transformation potential factors.</p>
-                            <div class="internal-note">
-                                <strong>Note:</strong> This is a strategic assessment based on institutional strengths, market opportunities, and transformation potential rather than current perception metrics.
-                            </div>
-                        </div>
-                    </div>
                     
                 </div>
                 
@@ -5290,7 +5883,6 @@
                                 <li><strong>Transparency Principle:</strong> Clear distinction between verified facts, industry data, and strategic assessments</li>
                                 <li><strong>Industry Benchmarks:</strong> Referenced from recognized education research organizations (NCES, McKinsey, etc.)</li>
                             </ul>
-                            <p><em>This presentation maintains the highest standards of academic integrity and source verification.</em></p>
                         </div>
                     </div>
                 </div>
